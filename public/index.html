@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <title>Un problema > Una oportunidad</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="robots" content="index, follow">
+	<meta name="description" content="Recursos para alcanzar tus objetivos. Propósito de vida, el éxito, la felicidad, la motivación, las finanzas, el liderazgo, las relaciones y la meditación.">
+	<meta name="keywords" content="propósito de vida,éxito,felicidad,motivación,finanzas,liderazgo,relaciones,atención plena,meditación,encuentra tu pasión,encuentra tu camino en la vida,vivir con propósito,claves del éxito,ahorrar dinero,consejos de motivación,líder,liderazgo,ser feliz">
+	
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://problemayoportunidad.com">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900' rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '675159');
+  </script>
+  <!-- End MailerLite Universal -->
+
+</head>
+<body>
+<div id="app">
+  <v-app>
+    <v-main class="mx-2">
+
+      <section id="hero">
+        <v-row>
+          <v-img src="img/logo-header.png">
+          
+            <v-theme-provider>
+              <v-container fill-height>
+                <v-row
+                  justify="center">
+                </v-row>
+              </v-container>
+            </v-theme-provider>
+            
+          </v-img>
+        </v-row>
+      </section>
+
+      <section id="about">
+
+        <v-container class="text-center">
+          <h2 class="display-2 font-weight-bold mb-3"><span>🚀</span> Un problema > Una oportunidad</h2>
+
+          <v-responsive
+            class="mx-auto mb-12"
+            width="56"
+          >
+            <v-divider class="mb-1"></v-divider>
+            <v-divider></v-divider>
+          </v-responsive>
+
+          <v-responsive
+            class="mx-auto title font-weight-light mb-8"
+            max-width="720"
+          >
+            <div v-html="heroJourney" class="blue--text text--lighten-1"></div>
+            <div v-html="heroJourney2"></div>
+          </v-responsive>
+
+          <v-avatar
+            class="elevation-12 mb-12"
+            size="128"
+          >
+            <v-img src="img/lion-king.jpg"></v-img>
+          </v-avatar>
+
+          <v-avatar
+            class="elevation-12 mb-12"
+            size="128"
+          >
+            <v-img src="img/tarzan.jpg"></v-img>
+          </v-avatar>
+
+          <v-avatar
+            class="elevation-12 mb-12"
+            size="128"
+          >
+            <v-img src="img/pursuit-happy.jpg"></v-img>
+          </v-avatar>
+
+          <v-avatar
+            class="elevation-12 mb-12"
+            size="128"
+          >
+            <v-img src="img/karate.jpg"></v-img>
+          </v-avatar>
+
+          <v-responsive
+            class="mx-auto title font-weight-light mb-8"
+            max-width="720"
+          >
+            {{ heroJourneyFooter }}
+          </v-responsive>
+        </v-container>
+      </section>
+
+
+      <section id="intro">
+        <v-container>
+
+          <v-responsive
+            class="mx-auto mb-8"
+            width="56"
+          >
+            <v-divider class="mb-1"></v-divider>
+            <v-divider></v-divider>
+          </v-responsive>
+
+          <v-responsive
+            class="mx-auto title font-weight-light mb-8"
+            max-width="720"
+          >
+
+            <p>{{ intro1 }}</p>
+
+            <br/>
+            <v-alert
+              text
+              dense
+              icon="mdi-pencil"
+              type="info"
+              border="left"
+            >
+              <em>{{ introQuote }}</em>
+            </v-alert>
+
+            <br/>
+						<div v-html="intro2"></div>
+
+            <br/>
+            <v-img src="img/salaray.png"></v-img>
+
+            <br/>
+            <p>{{ intro3 }}</p>
+            
+            <br/>
+            <div v-html="intro4"></div>
+            
+            <br/>
+
+            <v-alert
+              text
+              color="teal"
+              icon="mdi-thumb-up"
+              type="info"
+              border="left"
+            >
+              <div v-html="forWhoIs"></div>
+            </v-alert>
+
+            <v-alert
+              text
+              icon="mdi-thumb-down"
+              type="warning"
+              border="left"
+            >
+              <div v-html="forWhoIsNot"></div>
+            </v-alert>
+            
+          </v-responsive>
+
+        </v-container>
+      </section>
+
+
+      <section id="contenido"
+        class="grey lighten-3">
+        
+        <div class="py-8"></div>
+
+        <v-container>
+          <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">Contenido</h2>
+
+          <v-responsive
+            class="mx-auto mb-12"
+            width="56"
+          >
+            <v-divider class="mb-1"></v-divider>
+            <v-divider></v-divider>
+          </v-responsive>
+
+          <v-row>
+            <v-col
+              v-for="({ id, src, text, title, chipText, link, showPriceAlert }, i) in plans"
+              :key="i"
+              cols="12"
+              md="4"
+							:id="id"
+            >
+              <v-img
+                :src="src"
+                class="mb-4"
+                height="275"
+                max-width="100%"></v-img>
+
+              <h3 class="font-weight-black mb-4 text-uppercase"
+                v-text="title"></h3>
+
+              <div class="title font-weight-light mb-5"
+                v-html="text"></div>
+
+              <p v-show="showPriceAlert"><strong> {{ currentPrice }} </strong></p>
+							
+							<p v-show="showPriceAlert && countdown > 0"><strong class="red--text text--lighten-1"> {{ nextPrice }} </strong></p>
+
+              <v-btn
+                class="mt-3 font-weight-black"
+                outlined
+                color="success"
+                :href="link" 
+                target="_blank"
+              >
+                <v-icon left>
+                  mdi-whatsapp
+                </v-icon>
+
+                {{ chipText }}
+
+              </v-btn>
+
+              <div class="py-8"></div>
+
+            </v-col>
+          </v-row>
+
+          <v-card
+            class="mx-auto"
+            color="light-blue lighten-4"
+          >
+            <v-card-title>
+              <v-icon
+                large
+                left>
+                mdi-heart
+              </v-icon>
+              <span class="text-h6">Únete hoy!!</span>
+            </v-card-title>
+        
+            <v-card-text class="text-h5">
+              <div v-html="priceBlocked"></div>
+            </v-card-text>
+          </v-card>
+
+          <div class="py-8"></div>
+
+        </v-container>
+      </section>
+
+
+      <section id="stats">
+        <v-parallax
+          :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
+          src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+        >
+          <v-container fill-height>
+            <v-row class="mx-auto">
+              <v-col
+                v-for="[value, title] of stats"
+                :key="title"
+                cols="12"
+                md="3"
+              >
+                <div class="text-center">
+                  <div
+                    class="display-3 font-weight-black mb-4"
+                    v-text="value"
+                  ></div>
+
+                  <div
+                    class="title font-weight-regular text-uppercase"
+                    v-text="title"
+                  ></div>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-parallax>
+      </section>
+
+      
+      <section id="experience"
+        class="grey lighten-3">
+
+        <div class="py-8"></div>
+
+        <v-container class="text-center">
+          <h2 class="display-2 font-weight-bold mb-3">Quién soy</h2>
+
+          <v-responsive
+            class="mx-auto mb-12"
+            width="56"
+          >
+            <v-divider class="mb-1"></v-divider>
+            <v-divider></v-divider>
+          </v-responsive>
+
+          <v-row>
+            <v-col
+              v-for="({ icon, title, text }, i) in experience"
+              :key="i"
+              cols="12"
+              md="4"
+            >
+              <v-card
+                class="py-12 px-4"
+                color="grey lighten-5"
+                flat
+              >
+                <v-theme-provider>
+                  <div>
+                    <v-avatar
+                      color="primary"
+                      size="88"
+                    >
+                      <v-icon
+                        large
+                        v-text="icon"
+                      ></v-icon>
+                    </v-avatar>
+                  </div>
+                </v-theme-provider>
+
+                <v-card-title
+                  class="justify-center font-weight-black text-uppercase"
+                  v-text="title"
+                ></v-card-title>
+
+                <v-card-text
+                  class="subtitle-1"
+                  v-text="text"
+                >
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+          <div class="py-12"></div>
+        </v-container>
+      </section>
+
+
+    </v-main>
+
+
+    <v-footer
+      class="justify-center"
+      color="#292929"
+      height="100"
+    >
+      <div class="title font-weight-light grey--text text--lighten-1 text-center">
+
+        &copy; {{ (new Date()).getFullYear() }} — Problema y Oportunidad
+
+        <v-avatar class="elevation-12 ml-2">
+          <v-img src="img/logo-short.png"></v-img>
+        </v-avatar>
+
+      </div>
+    </v-footer>
+  </v-app>
+ </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+ 
+ <script>
+  new Vue({
+    el: '#app',
+    vuetify: new Vuetify(),
+    data () {
+      return {
+
+        heroJourney: "<em>“El </em><em><strong>viaje del héroe</strong></em><em> es la evolución del personaje. Es su proceso de embarcar a una aventura, enfrentarse a un desafío y superarlo para convertirse en una mejor persona, normalmente mejorando también el bien mayor en el camino”</em> <br/><br/>",
+
+        heroJourney2: "¿Te has dado cuenta de que esto es lo que pasa en muchas películas? El protagonista es feliz y todo va bien en su vida, hasta que de repente aparece un problema que lo cambia todo…",
+
+        heroJourneyFooter: "También pasa en la vida real. Un día te encuentras con un problema grave, que te genera una gran ansiedad y estrés. Te sientes perdido y no sabes qué hacer.",
+
+        intro1: "Por un problema económico familiar en 2008, hoy estoy donde estoy. Un problema que yo, de ninguna forma contribuí a crear, pero del que sentía que tenia que ser parte del mismo, para poder solucionarlo.",
+
+        introQuote: "Si algo te afecta o te hace sentir mal, eres parte del problema, no importa si lo has causado o no. Si no te sientes parte del problema nunca podrás solucionarlo.",
+
+        intro2: "Es en momentos de maxima presión donde más se crece y aumenta la creatividad. Ese problema fue mi oportunidad para acumular un conocimiento que hoy quiero pasarte a ti (si es que crees que lo necesitas y te puede ayudar). <strong>No sigas si crees que ya lo sabes todo.</strong>",
+
+        intro3: "La gráfica muestra como mi valor ha aumentado y con ello mi nivel de ingresos. Pero de igual forma podría ser la representación de valores, habilidades y conocimientos adquiridos.",
+
+        intro4: "Si decides seguir y quieres acceder a un contenido que te va a aportar valor día a día, quiero que sepas que vas a tenerlo a tu disposición de una forma en la que cada minuto vale la pena. <strong>No tendrás que saltar partes que no te resulten tan interesantes o que estén de relleno.</strong> Son conceptos cortos y directos. Es más, estoy seguro de que volverás a leer/escuchar repetidas veces la gran mayoría.",
+
+        forWhoIs: "Busco crear <strong>valor a través de valores</strong>. Comparto conocimientos que he ido acumulando y aplicando, con el objetivo de convertirme en <strong>una mejor versión de mí mismo</strong> cada día. Exploro temas como el propósito de vida, el éxito, la felicidad, la motivación, las finanzas, el liderazgo, las relaciones, la atención plena y la meditación.",
+        
+        forWhoIsNot: "Este contenido no está dirigido a aquellos que buscan a un influencer o que esperan encontrar fórmulas mágicas para cambiar sus vidas de la noche a la mañana. Tampoco está destinado a personas que buscan una guía o tutorial para el éxito sin estar dispuestas a poner de su parte. El éxito no esta garantizado, eso solo depende de ti. <br/>" +
+            "<br/><strong>No soy un influencer, no tengo redes sociales, no soy psicólogo y no he inventado algo nuevo.</strong> Este contenido es para aquellos que se sienten identificados o inspirados por la temática, que tengan valores similares y que están dispuestos a comprometerse, con disciplina y perseverancia, para alcanzar las metas y objetivos que se propongan en sus vidas.",
+
+				priceBlocked: "Las tarifas aumentan a medida que se unen nuevos miembros. Una vez que te unas, tu precio permanecerá bloqueado, independientemente de los aumentos de precio más adelante.  <br/> <br/>" +
+					"Por la misma razón, <strong>nunca se van a aplicar descuentos a los precios que estas viendo ahora mismo.</strong> Es mi manera de agradecerte tu interés en este contenido.",
+        
+        experience: [
+          {
+            icon: 'mdi-laptop',
+            title: 'Sofware Engineer',
+            text: 'He desarrollado decenas de proyectos. Hago practicamente de todo, diseño, planificación, desarrollo tanto Backend como Frontend, automatización de cualquier cosa, puesta en marcha, monitorización de logs y metricas, etc...',
+          },
+          {
+            icon: 'mdi-account-group-outline',
+            title: 'Líder de Líderes',
+            text: 'Creando líderes y equipos con capacidad de tomar decisiones de forma independiente. Efectivos y proactivos a la hora de gestionar proyectos y resolver problemas. Busqueda y adquisición de talento para formar equipos robustos.',
+          },
+          {
+            icon: 'mdi-creation',
+            title: 'Consultor Digital',
+            text: 'Te ayudo a usar las últimas herramientas y tecnologías de forma correcta y segura, especialmente con herramientas de Inteligencia Artificial. Automatizazión de tareas. Soluciones en la nube, on-premises, e-commerce, webs, apps, webapps, etc...',
+          },
+        ],
+
+        stats: [
+          ['11+', 'años liderando equipos'],
+          ['6', 'empresas'],
+          ['2', 'paises'],
+          ['40+', 'proyectos']
+        ],
+
+        plans: [
+          {
+						id: "seeds",
+            src: 'https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+            title: 'Semillas diarias',
+            chipText: 'Únete gratis',
+            link: 'https://go.problemayoportunidad.com/comunidad',
+            text: 'Entra en la comunidad de WhatsApp y recibirás una semilla 🌱 de desarrollo personal (de lunes a viernes solamente, los fines de semana desconecta de todo!)'
+          },
+          {
+						id: "monthly",
+            src: 'https://images.unsplash.com/photo-1475938476802-32a7e851dad1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+            title: 'Posts semanales',
+            chipText: 'Quiero un mes gratis',
+            link: 'https://api.whatsapp.com/send/?phone=971582454068&text=Hola%21+Quiero+probar+la+subscripci%C3%B3n+mensual+gratis&type=phone_number&app_absent=0',
+            text: '<strong>¿Quieres ser la mejor versión de ti mismo?</strong> Suscríbete a mi newsletter y recibe un post semanal con mi historia personal y conceptos que te ayudarán a alcanzar tus metas. ',
+						showPriceAlert: true
+          },
+          {
+						id: "seminars",
+            src: 'https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80',
+            title: 'Seminarios 1 a 1',
+            chipText: 'Quiero saber más',
+            link: 'https://api.whatsapp.com/send/?phone=971582454068&text=Hola%21+Quiero+saber+m%C3%A1s+sobre+los+seminarios&type=phone_number&app_absent=0',
+            text: '<ul><li>Independencia financiera</li><li>Gestión de proyectos y equipos</li><li>Desarrollo personal</li><li>Crea tu negocio digital desde cero</li></ul>'
+          },
+        ],
+
+      }
+    },
+		computed: {
+			countdown() {
+				return (new Date()).getDate() > 15 ? 30 - (new Date()).getDate() : 0
+			},
+			currentPrice() {
+				prices = [7, 9, 14, 17, 23, 26, 34, 39, 43, 48, 72, 87, 94, 4, 99]
+				//       [d, j, f,  m,  a,  m,  j,  j,  a,  s,  o,  n,  d,  <, >]
+
+				iter = (new Date()).getFullYear() == 2023 ? 13 : ((new Date()).getFullYear() == 2024 ? (new Date()).getMonth() : 14)
+
+				return 'Solo por $' + prices[iter] + '.99 al mes'
+			},
+			nextPrice() {
+				prices = [9, 14, 17, 23, 26, 34, 39, 43, 48, 72, 87, 94, 7, 99]
+				//       [j, f,  m,  a,  m,  j,  j,  a,  s,  o,  n,  d,  <, >]
+
+				iter = (new Date()).getFullYear() == 2023 ? 12 : ((new Date()).getFullYear() == 2024 ? (new Date()).getMonth() : 13)
+
+				return 'Será $' + prices[iter] + '.99 al mes en ' + this.countdown + (this.countdown > 1 ? ' días' : ' día')
+			}
+		}
+  })
+</script>
+</body>
+</html>
